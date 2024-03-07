@@ -4,7 +4,7 @@ public class subMenus {
 			public static void addStudent() {
 		
 				System.out.println("New student?/n Okay, please type in first name, last name followed by their GPA.");
-				String fName = 
+				String fName 
 	}
 			public static void removeStudent() {
 				
