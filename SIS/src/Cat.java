@@ -1,5 +1,5 @@
 
-public class Cat
+public  class Cat
 	{
 		//System.out.println("it work");
 		//Trying our best
