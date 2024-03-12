@@ -23,23 +23,23 @@ public class subMenus {
 				System.out.println("Enter Last name: ");
 				String lastName = userStringInput.nextLine();
 				System.out.println("First period: ");
-				String firstP = userStringInput.nextLine();
+				String course1 = userStringInput.nextLine();
 				System.out.println("First period grade: ");
 				String firstGrade = userStringInput.nextLine();
 				System.out.println("Second period: ");
-				String secondP = userStringInput.nextLine();
+				String course2 = userStringInput.nextLine();
 				System.out.println("Second period grade: ");
 				String secondGrade = userIntInput.nextLine();
 				System.out.println("Third period:");
-				String thirdP = userStringInput.nextLine();
+				String course3 = userStringInput.nextLine();
 				System.out.println("Third period grade: ");
 				String thirdGrade = userStringInput.nextLine();
 				
-				//Course course1 = new Course(firstP, firstGrade);
-		        //  Course course2 = new Course(secondP, secondGrade);
-		        //Course course3 = new Course(thirdP, thirdGrade);
+				Course course1 = new Course(firstP, firstGrade);
+		        Course course2 = new Course(secondP, secondGrade);
+		        Course course3 = new Course(thirdP, thirdGrade);
 		        
-				//Student.database.add(new Student(firstName, lastName, firstP, firstGrade, secondP, secondGrade, thirdP, thirdGrade));
+				Database.database.add(new Student(firstName, lastName, course1, firstGrade, course2, secondGrade, course3, thirdGrade));
 				
 				//^^^^ This wont work right now, will have to resove ^^^^^ 
 				
