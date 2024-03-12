@@ -9,6 +9,7 @@ public class GradeChanger
 			System.out.println("Which Student do you want to update?");
 			for(int i = 0; i < Database.database.size();i++)
 				{
+
 					System.out.println(menuNumber++ + ". " + Database.database.get(i).getFirstName() + " " + Database.database.get(i).getLastName());
 				}
 			int studentChoice = scanner.nextInt();
