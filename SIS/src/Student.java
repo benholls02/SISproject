@@ -3,12 +3,12 @@ public class Student
 	{
 		private String firstName;
 		private String lastName;
-		private double GPA;
+		private String GPA;
 		private Course course1;
 		private Course course2;
 		private Course course3;
 		
-		public Student(String firstName, String lastName, double GPA, Course course1, Course course2, Course course3)
+		public Student(String firstName, String lastName, String GPA, Course course1, Course course2, Course course3)
 		{
 			this.firstName = firstName;
 			this.lastName = lastName;
@@ -38,14 +38,14 @@ public class Student
 				this.lastName = lastName;
 			}
 
-		public double getGPA()
+		public String getGPA()
 			{
 				return GPA;
 			}
 
-		public void setGPA(double gPA)
+		public void setGPA(String GPA)
 			{
-				GPA = gPA;
+				this.GPA = GPA;
 			}
 
 		public Course getCourse1()
