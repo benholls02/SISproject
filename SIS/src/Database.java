@@ -19,7 +19,7 @@ public class Database
 								new Course(count++, file.next(), file.next()),
 								new Course(count++, file.next(), file.next()),
 								new Course(count++, file.next(), file.next())));
-						//System.out.println(database.get(i).getCourse1().getClassName() + database.get(i).getCourse1().getGrade());
+						//System.out.println(database.get(i).getCourse1().getClassName() + database.get(i).getCourse1().getPeriod());
 						i++;
 						count = 1;
 
