@@ -6,6 +6,8 @@ import java.io.IOException;
 
 public class Database
 	{
+
+
 		static ArrayList<Student> database = new ArrayList<Student>();
 		
 		public static void fillArrayList() throws FileNotFoundException
@@ -19,4 +21,5 @@ public class Database
 		}
 		
 		
+
 	}
