@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
-import java.io.File;
 import java.io.IOException;
 
 public class Database
@@ -20,7 +19,6 @@ public class Database
 								new Course(count++, file.next(), file.next()),
 								new Course(count++, file.next(), file.next()),
 								new Course(count++, file.next(), file.next())));
-						file.nextLine();
 						//System.out.println(database.get(i).getCourse1().getClassName() + database.get(i).getCourse1().getGrade());
 						i++;
 						count = 1;
