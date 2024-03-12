@@ -7,7 +7,7 @@ public class Main
 			{
 
 				
-				updateGrade();
+				GradeChanger.updateGrade();
 
 			}
 
