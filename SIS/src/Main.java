@@ -11,6 +11,7 @@ public class Main
 				GradeChanger.updateGrade();
 				//updateGrade();
 				Database.fillArrayList();
+				GradeChanger.updateGrade();
 
 			}
 
