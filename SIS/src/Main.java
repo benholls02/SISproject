@@ -10,6 +10,7 @@ public class Main
 				
 				//updateGrade();
 				Database.fillArrayList();
+				GradeChanger.updateGrade();
 
 			}
 
