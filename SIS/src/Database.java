@@ -19,10 +19,17 @@ public class Database
 								new Course(count++, file.next(), file.next()),
 								new Course(count++, file.next(), file.next()),
 								new Course(count++, file.next(), file.next())));
-						//System.out.println(database.get(i).getCourse1().getClassName() + database.get(i).getCourse1().getPeriod());
+						
 						i++;
 						count = 1;
-
+					}
+				for(int y = 0; y < database.size(); y++)
+					{
+						int value1, value2, value3;
+						if(database.get(y).getCourse1().getGrade().substring(0,1).compareTo("A")==0)
+							{
+								
+							}
 					}
 
 			}
