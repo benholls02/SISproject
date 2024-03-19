@@ -7,10 +7,9 @@ public class Main
 		public static void main(String[] args) throws IOException
 			{
 
-				
-				//updateGrade();
 				Database.fillArrayList();
-				GradeChanger.updateGrade();
+				GradeChangerOrClassSwitch.gradeChangerOrClassSwitch();
+	
 
 			}
 

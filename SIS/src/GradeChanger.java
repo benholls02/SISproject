@@ -6,7 +6,7 @@ public class GradeChanger
 	static int menuNumber = 1;
 	public static void updateGrade()
 		{
-			System.out.println("Which Student do you want to update?");
+			System.out.println("Which Student do you want to edit?");
 			for(int i = 0; i < Database.database.size();i++)
 				{
 					System.out.println(menuNumber++ + ". " + Database.database.get(i).getFirstName() + " " + Database.database.get(i).getLastName());
