@@ -16,7 +16,11 @@ public class Student
 			this.course1 = course1;
 			this.course2 = course2;
 			this.course3 = course3;
+			
 		}
+
+		
+		
 
 		public String getFirstName()
 			{
