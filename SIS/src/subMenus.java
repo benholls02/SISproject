@@ -26,20 +26,18 @@ public class subMenus {
 				String firstName = userStringInput.nextLine();
 				System.out.println("Enter Last name: ");
 				String lastName = userStringInput.nextLine();
-				System.out.println("First period: ");
-				String course1 = userStringInput.nextLine();
-				System.out.println("First period grade: ");
-				String firstGrade = userStringInput.nextLine();
-				System.out.println("Second period: ");
-				String course2 = userStringInput.nextLine();
-				System.out.println("Second period grade: ");
-				String secondGrade = userIntInput.nextLine();
-				System.out.println("Third period:");
-				String course3 = userStringInput.nextLine();
-				System.out.println("Third period grade: ");
-				String thirdGrade = userStringInput.nextLine();
+				System.out.println("Enter the GPA:");
+		        String GPA = scanner.nextLine();
+		        System.out.println("Enter course 1 details (name, grade):");
+		        Course course1 = getCourseFromUserInput(scanner);
+		        System.out.println("Enter course 2 details (name, grade):");
+		        Course course2 = getCourseFromUserInput(scanner);
+		        System.out.println("Enter course 3 details (name, grade):");
+		        Course course3 = getCourseFromUserInput(scanner);
+
 				
-				Database.database.add(new Student(firstName, lastName, course1, firstGrade, course2, secondGrade, course3, thirdGrade));
+				
+				Database.database.add(new Student(firstName, lastName, GPA, course1, course2, course3));
 				
 				System.out.println("New student added. Would you like to view the current student roster and grades?(Y or N)");
 				String yay = userStringInput.nextLine();

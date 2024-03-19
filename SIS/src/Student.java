@@ -16,12 +16,11 @@ public class Student
 			this.course1 = course1;
 			this.course2 = course2;
 			this.course3 = course3;
+			
 		}
 
-		public Student(String firstName2, String lastName2, String course12, String firstGrade, String course22,
-				String secondGrade, String course32, String thirdGrade) {
-			// TODO Auto-generated constructor stub
-		}
+		
+		
 
 		public String getFirstName()
 			{
