@@ -18,6 +18,11 @@ public class Student
 			this.course3 = course3;
 		}
 
+		public Student(String firstName2, String lastName2, String course12, String firstGrade, String course22,
+				String secondGrade, String course32, String thirdGrade) {
+			// TODO Auto-generated constructor stub
+		}
+
 		public String getFirstName()
 			{
 				return firstName;

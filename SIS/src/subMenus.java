@@ -4,24 +4,17 @@ public class subMenus {
 	 
 	public static void main(String [] args)throws IOException {
 		Database.fillArrayList();
-		System.out.println("Hello, welcome to the Student Access System. Please select an option."); 
-		System.out.println("(a) Add or remove a student"); 
-		System.out.println("(b) Change grades");
-		System.out.println("(c) sort students");
-		Scanner sc = new Scanner(System.in);
-		String ans = sc.next();
-		if (ans.equals("a")) {
 			System.out.println("Ok, do you want to add a student (a) or remove a student (b) ?");
-			Scanner sc2 = new Scanner(System.in);
-			String ans2 = sc.next();
-			if (ans2.equals("a")){
+			Scanner sc = new Scanner(System.in);
+			String ans = sc.next();
+			if (ans.equals("a")){
 				addStudent();
-			}else if(ans2.equals("b")) {
+			}else if(ans.equals("b")) {
 				removeStudent();
 			}
 				
 			
-		}
+		
 
 	}
 			public static void addStudent() {
@@ -46,6 +39,31 @@ public class subMenus {
 				System.out.println("Third period grade: ");
 				String thirdGrade = userStringInput.nextLine();
 				
+				Database.database.add(new Student(firstName, lastName, course1, firstGrade, course2, secondGrade, course3, thirdGrade));
+				
+				System.out.println("New student added. Would you like to view the current student roster and grades?(Y or N)");
+				String yay = userStringInput.nextLine();
+					if (yay.equals("Y")){
+						int count = 1;
+				        for (Student student : Database.database) {
+				            System.out.print(count + ") " + student.getFirstName() + " " + student.getLastName());
+				            System.out.print (" |  Courses: ");
+				            System.out.print("   1. " + student.getCourse1().getClassName() + " ~ " + student.getCourse1().getGrade());
+				            System.out.print("   2. " + student.getCourse2().getClassName() + " ~ " + student.getCourse2().getGrade());
+				            System.out.print("   3. " + student.getCourse3().getClassName() + " ~ " + student.getCourse3().getGrade());
+				            System.out.println();
+				            count++;
+				        }
+				        
+					}else if (yay.equals("N")){
+						System.out.println("Ok.");
+					}
+					
+					System.out.println("Please press '1' to go back to the main menu.");
+					Scanner one = new Scanner(System.in);
+					if(one.equals("1")) {
+						// Main();
+					}
 			//	Course course1 = new Course(firstP, firstGrade);
 		      //  Course course2 = new Course(secondP, secondGrade);
 		       // Course course3 = new Course(thirdP, thirdGrade);
@@ -57,14 +75,18 @@ public class subMenus {
 				
 	}
 			public static void removeStudent() {
+				int count = 1;
 		        for (Student student : Database.database) {
-		            System.out.println("Student Name: " + student.getFirstName() + " " + student.getLastName());
-		            System.out.println("Courses:");
-		            System.out.println("1. " + student.getCourse1().getClassName() + " - " + student.getCourse1().getPeriod());
-		            System.out.println("2. " + student.getCourse2().getClassName() + " - " + student.getCourse2().getPeriod());
-		            System.out.println("3. " + student.getCourse3().getClassName() + " - " + student.getCourse3().getPeriod());
+		            System.out.print(count + ") " + student.getFirstName() + " " + student.getLastName());
+		            System.out.print (" |  Courses: ");
+		            System.out.print("   1. " + student.getCourse1().getClassName() + " ~ " + student.getCourse1().getGrade());
+		            System.out.print("   2. " + student.getCourse2().getClassName() + " ~ " + student.getCourse2().getGrade());
+		            System.out.print("   3. " + student.getCourse3().getClassName() + " ~ " + student.getCourse3().getGrade());
 		            System.out.println();
+		            count++;
 		        }
+		        System.out.println("Enter the number corresponding to the student you want to delete!");
+		        Scanner del = new Scanner(System.in);
 		    }
 
 }
