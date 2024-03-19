@@ -8,10 +8,13 @@ public class Main
 			{
 
 				
-				GradeChanger.updateGrade();
+				//GradeChanger.updateGrade();
 				//updateGrade();
 				Database.fillArrayList();
-				GradeChanger.updateGrade();
+				Database.gpaArrayList();
+				//GradeChanger.updateGrade();
+				ChooseSort.whichSort();
+				Database.printList();
 
 			}
 

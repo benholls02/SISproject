@@ -30,14 +30,17 @@ public class ChooseSort
 
 						if (periodNumber == 1)
 							{
+								Collections.sort(Database.database, new LastNameSort());
 								Collections.sort(Database.database, new PeriodSort1());
 							}
 						else if (periodNumber == 2)
 							{
+								Collections.sort(Database.database, new LastNameSort());
 								Collections.sort(Database.database, new PeriodSort2());
 							}
 						else if (periodNumber == 3)
 							{
+								Collections.sort(Database.database, new LastNameSort());
 								Collections.sort(Database.database, new PeriodSort3());
 							}
 					}
