@@ -27,14 +27,14 @@ public class subMenus {
 				System.out.println("Enter Last name: ");
 				String lastName = userStringInput.nextLine();
 				System.out.println("Enter the GPA:");
-		        String GPA = scanner.nextLine();
-		        System.out.println("Enter course 1 details (name, grade):");
-		        Course course1 = getCourseFromUserInput(scanner);
-		        System.out.println("Enter course 2 details (name, grade):");
-		        Course course2 = getCourseFromUserInput(scanner);
-		        System.out.println("Enter course 3 details (name, grade):");
-		        Course course3 = getCourseFromUserInput(scanner);
-
+		        Double GPA = scanner.nextDouble();
+		        System.out.println("Enter the first period course details (period, name, grade):");
+		        Course course1 = new Course(scanner.nextInt(), scanner.next(), scanner.next());
+		        System.out.println("Enter second period course details (period, name, grade):");
+		        Course course2 = new Course(scanner.nextInt(), scanner.next(), scanner.next());
+		        System.out.println("Enter third period course details (period, name, grade):");
+		        Course course3 = new Course(scanner.nextInt(), scanner.next(), scanner.next());
+		        scanner.close();
 				
 				
 				Database.database.add(new Student(firstName, lastName, GPA, course1, course2, course3));
@@ -83,8 +83,15 @@ public class subMenus {
 		            System.out.println();
 		            count++;
 		        }
-		        System.out.println("Enter the number corresponding to the student you want to delete!");
+		        System.out.println("Enter the number corresponding to the student you want to delete:");
 		        Scanner del = new Scanner(System.in);
+		        int index = del.nextInt();
+		        if (index >= 1 && index <= Database.database.size()) {
+		            Database.database.remove(index - 1);
+		            System.out.println("Student removed.");
+		        }
+		        del.close(); 
+		        
 		    }
 
 }
