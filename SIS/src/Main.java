@@ -7,6 +7,11 @@ public class Main
 		public static void main(String[] args) throws IOException
 			{
 
+				//Database.fillArrayList();
+				//GradeChangerOrClassSwitch.gradeChangerOrClassSwitch();
+	
+
+
 				
 				//GradeChanger.updateGrade();
 				//updateGrade();
@@ -15,6 +20,7 @@ public class Main
 				//GradeChanger.updateGrade();
 				ChooseSort.whichSort();
 				Database.printList();
+
 
 			}
 

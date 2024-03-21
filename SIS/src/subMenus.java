@@ -63,6 +63,16 @@ public class subMenus {
 					if(one.equals("1")) {
 						// Main();
 					}
+<<<<<<< HEAD
+=======
+			//	Course course1 = new Course(firstP, firstGrade);
+		      //  Course course2 = new Course(secondP, secondGrade);
+		       // Course course3 = new Course(thirdP, thirdGrade);
+		        
+			//	Database.database.add(new Student(firstName, lastName, course1, firstGrade, course2, secondGrade, course3, thirdGrade));
+				
+				//^^^^ This wont work right now, will have to resove ^^^^^ 
+>>>>>>> upstream/master
 				
 			
 	}
