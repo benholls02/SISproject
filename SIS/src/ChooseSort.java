@@ -19,7 +19,8 @@ public class ChooseSort
 					}
 				else if (choice == 2)
 					{
-						
+						Collections.sort(Database.database, new LastNameSort());
+						Collections.sort(Database.database, new GPASort());
 					}
 				else if (choice == 3)
 					{

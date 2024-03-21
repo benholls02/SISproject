@@ -32,7 +32,7 @@ public class Database
 				for (int y = 0; y < database.size(); y++)
 					{
 						double value1 = 0.00;
-						double value2 = 0.00; 
+						double value2 = 0.00;
 						double value3 = 0.00;
 
 						if (database.get(y).getCourse1().getGrade().substring(0, 1).equals("A"))
@@ -112,11 +112,11 @@ public class Database
 
 						if (database.get(y).getCourse2().getGrade().length() > 1)
 							{
-								if (database.get(y).getCourse1().getGrade().substring(1).equals("+"))
+								if (database.get(y).getCourse2().getGrade().substring(1).equals("+"))
 									{
 										value2 += 0.30;
 									}
-								else if (database.get(y).getCourse1().getGrade().substring(1).equals("-"))
+								else if (database.get(y).getCourse2().getGrade().substring(1).equals("-"))
 									{
 										value2 -= 0.30;
 									}
@@ -124,33 +124,39 @@ public class Database
 
 						if (database.get(y).getCourse3().getGrade().length() > 1)
 							{
-								if (database.get(y).getCourse1().getGrade().substring(1).equals("+"))
+								if (database.get(y).getCourse3().getGrade().substring(1).equals("+"))
 									{
 										value3 += 0.30;
 									}
-								else if (database.get(y).getCourse1().getGrade().substring(1).equals("-"))
+								else if (database.get(y).getCourse3().getGrade().substring(1).equals("-"))
 									{
 										value3 -= 0.30;
 									}
 							}
 
 						database.get(y).setGPA((value1 + value2 + value3) / 3);
+
 					}
 			}
 
 		public static void printList()
 			{
+				System.out.println();
+				System.out.println("==================================================================");
+				System.out.printf("%-10s %-11s %-5s %-8s %-3s %-8s %-3s %-8s %-3s %n", "FIRST", "LAST", "GPA",
+						"PERIOD 1", "", "PERIOD 2", "", "PERIOD 3", "");
+				System.out.println("==================================================================");
 				DecimalFormat d = new DecimalFormat("0.00");
 				for (int i = 0; i < database.size(); i++)
 					{
-						System.out.println(database.get(i).getFirstName() + " " + database.get(i).getLastName() + " "
-								+ d.format(database.get(i).getGPA()) + " " + database.get(i).getCourse1().getClassName()
-								+ " " + database.get(i).getCourse1().getGrade() + " "
-								+ database.get(i).getCourse2().getClassName() + " "
-								+ database.get(i).getCourse2().getGrade() + " "
-								+ database.get(i).getCourse3().getClassName() + " "
-								+ database.get(i).getCourse3().getGrade());
+						System.out.printf("%-10s %-11s %-5s %-8s %-3s %-8s %-3s %-8s %-3s %n",
+								database.get(i).getFirstName(), database.get(i).getLastName(),
+								d.format(database.get(i).getGPA()), database.get(i).getCourse1().getClassName(),
+								database.get(i).getCourse1().getGrade(), database.get(i).getCourse2().getClassName(),
+								database.get(i).getCourse2().getGrade(), database.get(i).getCourse3().getClassName(),
+								database.get(i).getCourse3().getGrade());
 					}
+				System.out.println("==================================================================");
 			}
 
 	}
