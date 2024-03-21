@@ -4,9 +4,11 @@ public class GradeChangerOrClassSwitch
 		static Scanner scan = new Scanner(System.in); 
 		public static void gradeChangerOrClassSwitch()
 			{
-				System.out.println("Do you wish to Change Grade or Switch Class?");
-				System.out.println("(1) Change Grade");
-				System.out.println("(2) Switch Class");
+				System.out.println("What would you like to do?");
+				System.out.println("===================================");
+				System.out.println("1. Change Grade");
+				System.out.println("2. Switch Class");
+				System.out.println("=================================== ");
 				int firstChoice = scan.nextInt();
 				if(firstChoice == 1)
 					{

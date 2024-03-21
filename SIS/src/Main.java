@@ -7,17 +7,9 @@ public class Main
 	{
 		public static void main(String[] args) throws IOException
 			{
-
-				// Database.fillArrayList();
-				// GradeChangerOrClassSwitch.gradeChangerOrClassSwitch();
-
-				// GradeChanger.updateGrade();
-				// updateGrade();
 				Database.fillArrayList();
 				Database.gpaArrayList();
 				mainMenu();
-				// GradeChanger.updateGrade();
-				// ChooseSort.whichSort();
 				Database.printList();
 
 			}
@@ -34,11 +26,11 @@ public class Main
 					}
 				else if(choice == 2)
 					{
-						
+						GradeChangerOrClassSwitch.gradeChangerOrClassSwitch();
 					}
 				else if(choice == 3)
 					{
-						
+						ChooseSort.whichSort();
 					}
 				else
 					{

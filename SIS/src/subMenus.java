@@ -39,52 +39,58 @@ public class subMenus
 		public static void addStudent()
 			{
 
-				System.out.println("New student?/n Okay, please type in first name, last name followed by their GPA.");
+				//System.out.println("New student?/n Okay, please type in first name, last name followed by their GPA.");
 				Scanner userStringInput = new Scanner(System.in);
 				Scanner userIntInput = new Scanner(System.in);
 				Scanner scanner = new Scanner(System.in);
+				System.out.println();
 				System.out.println("New student? Okay.");
 				System.out.println("Please type in their first name:");
 				String firstName = userStringInput.nextLine();
+				System.out.println();
 				System.out.println("Enter Last name: ");
 				String lastName = userStringInput.nextLine();
+				System.out.println();
 				System.out.println("Enter the GPA:");
 		        Double GPA = scanner.nextDouble();
+		        System.out.println();
 		        System.out.println("Enter the first period course details, with just spaces in between (period    name    grade):");
 		        Course course1 = new Course(scanner.nextInt(), scanner.next(), scanner.next());
+		        System.out.println();
 		        System.out.println("Enter second period course details, with just spaces in between (period    name    grade):");
 		        Course course2 = new Course(scanner.nextInt(), scanner.next(), scanner.next());
+		        System.out.println();
 		        System.out.println("Enter third period course details, with just spaces in between (period    name    grade):");
 		        Course course3 = new Course(scanner.nextInt(), scanner.next(), scanner.next());
 		  
 		        
 				Database.database.add(new Student(firstName, lastName, GPA, course1, course2, course3));
 				
-				System.out.println("New student added. Would you like to view the current student roster and grades?(Y or N)");
-				  Scanner input = new Scanner(System.in);
-				    String yay = input.nextLine();
-			
-					if (yay.equals("Y")){
-						int count = 1;
-						for (Student student : Database.database) {
-						    System.out.printf("%d) %-15s %-15s GPA: %.2f | Courses:", count, student.getFirstName(), student.getLastName(), student.getGPA());
-						    System.out.printf("   1. %-15s ~ %-2s", student.getCourse1().getClassName(), student.getCourse1().getGrade());
-						    System.out.printf("   2. %-15s ~ %-2s", student.getCourse2().getClassName(), student.getCourse2().getGrade());
-						    System.out.printf("   3. %-15s ~ %-2s", student.getCourse3().getClassName(), student.getCourse3().getGrade());
-						    count++;
-						}
-					
-				       
-				        
-					}else if (yay.equals("N")){
-						System.out.println("Ok.");
-					}
-					
-					System.out.println(" Please press '1' to go back to the main menu. ");
-					Scanner one = new Scanner(System.in);
-					if(one.equals("1")) {
-					//Main();
-					}
+//				System.out.println("New student added. Would you like to view the current student roster and grades?(Y or N)");
+//				  Scanner input = new Scanner(System.in);
+//				    String yay = input.nextLine();
+//			
+//					if (yay.equals("Y")){
+//						int count = 1;
+//						for (Student student : Database.database) {
+//						    System.out.printf("%d) %-15s %-15s GPA: %.2f | Courses:", count, student.getFirstName(), student.getLastName(), student.getGPA());
+//						    System.out.printf("   1. %-15s ~ %-2s", student.getCourse1().getClassName(), student.getCourse1().getGrade());
+//						    System.out.printf("   2. %-15s ~ %-2s", student.getCourse2().getClassName(), student.getCourse2().getGrade());
+//						    System.out.printf("   3. %-15s ~ %-2s", student.getCourse3().getClassName(), student.getCourse3().getGrade());
+//						    count++;
+//						}
+//					
+//				       
+//				        
+//					}else if (yay.equals("N")){
+//						System.out.println("Ok.");
+//					}
+//					
+//					System.out.println(" Please press '1' to go back to the main menu. ");
+//					Scanner one = new Scanner(System.in);
+//					if(one.equals("1")) {
+//					//Main();
+//					}
 
 				
 			

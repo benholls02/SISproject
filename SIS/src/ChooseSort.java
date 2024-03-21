@@ -7,10 +7,13 @@ public class ChooseSort
 			{
 				Scanner userInt = new Scanner(System.in);
 
-				System.out.println("What would you like to sort by?");
+				System.out.println();
+				System.out.println("What would you like to do?");
+				System.out.println("===================================");
 				System.out.println("1. Sort by last name");
 				System.out.println("2. Sort by GPA");
 				System.out.println("3. Sort by period");
+				System.out.println("===================================");
 
 				int choice = userInt.nextInt();
 				if (choice == 1)
@@ -24,6 +27,7 @@ public class ChooseSort
 					}
 				else if (choice == 3)
 					{
+						System.out.println();
 						System.out.println("By what period number? (1, 2, 3)");
 						int periodNumber = userInt.nextInt();
 
