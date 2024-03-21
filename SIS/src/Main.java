@@ -10,6 +10,7 @@ public class Main
 				Database.fillArrayList();
 				Database.gpaArrayList();
 				mainMenu();
+				Database.gpaArrayList();
 				Database.printList();
 
 			}
