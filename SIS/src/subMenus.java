@@ -14,7 +14,7 @@ public class subMenus {
 			}
 				
 
-	}
+	}    
 			public static void addStudent() {
 
 		
@@ -58,10 +58,10 @@ public class subMenus {
 						System.out.println("Ok.");
 					}
 					
-					System.out.println("Please press '1' to go back to the main menu.");
+					System.out.println(" Please press '1' to go back to the main menu. ");
 					Scanner one = new Scanner(System.in);
 					if(one.equals("1")) {
-						// Main();
+					//Main();
 					}
 
 				
