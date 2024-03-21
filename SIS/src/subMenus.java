@@ -18,7 +18,7 @@ public class subMenus {
 			public static void addStudent() {
 
 		
-				System.out.println("New student?/n Okay, please type in first name, last name followed by their GPA.");
+				
 				Scanner userStringInput=new Scanner(System.in); 
 				Scanner scanner = new Scanner(System.in);			
 				System.out.println("New student? Okay."); 
